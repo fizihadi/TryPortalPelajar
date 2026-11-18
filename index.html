@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ms" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAL PELAJAR IPG</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            ipgNavy: {
+              900: '#07162c',
+              800: '#0c2b5e',
+              700: '#133e82',
+            },
+            ipgGold: {
+              400: '#fdf1a9',
+              500: '#dfb253',
+              600: '#b8860b',
+              700: '#997015',
+            },
+            ipgBlue: {
+              500: '#0080ff',
+              600: '#0066cc',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ========================================================= */
+    /* CUSTOMIZABLE BACKGROUND IMAGE                              */
+    /* Replace the URL below with your background image path/URL  */
+    /* Example: --bg-photo-url: url('images/my-bg.jpg');         */
+    /* ========================================================= */
+    :root {
+      --bg-photo-url: url('/QR/Bg.png'); /* Add your custom background photo URL here */
+    }
+
+    /* Container styled for custom photo background */
+    .bg-custom-photo {
+      background-image: var(--bg-photo-url);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #0b1329; /* Neutral base background fallback */
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #07162c; }
+    ::-webkit-scrollbar-thumb { background: #dfb253; border-radius: 9999px; }
+  </style>
+</head>
+
+<body class="h-full bg-custom-photo text-slate-100 font-sans antialiased relative overflow-x-hidden flex flex-col min-h-screen">
+
+  <!-- ========================================================= -->
+  <!-- TOP NAVIGATION HEADER                                     -->
+  <!-- ========================================================= -->
+  <header class="relative z-20 border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Title & Header Logo Slot -->
+      <div class="flex items-center space-x-3">
+        
+        <!-- HEADER LOGO PLACEHOLDER -->
+        <!-- Replace the icon div below with your own <img> tag: -->
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white (Hex: #ffffff) border border-ipgGold-500/50 flex items-center justify-center shadow-lg ">
+          <img src="/QR/logo3.png" alt="IPG Logo" class="w-10 h-10 object-contain">
+        </div>
+
+        <div>
+          <h1 class="font-extrabold text-base sm:text-xl text-white tracking-wide uppercase flex items-center gap-2">
+            PORTAL PELAJAR IPGKBA</span>
+          </h1>
+          <p class="text-[11px] sm:text-xs text-slate-300 tracking-wider">Institut Pendidikan Guru Malaysia</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================================= -->
+  <!-- MAIN LANDING HUB CONTENT                                  -->
+  <!-- ========================================================= -->
+  <main class="relative z-10 flex-grow flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 w-full">
+    
+    <div class="max-w-5xl w-full mx-auto flex flex-col items-center space-y-10 py-6">
+      
+      <!-- CENTRAL WHITE PORTAL CARD (TOP & CENTERED) -->
+      <div class="bg-white text-slate-900 rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-100 relative overflow-hidden backdrop-blur-lg text-center w-full max-w-lg mx-auto">
+        
+        <!-- CENTER LOGO PLACEHOLDER & TITLE -->
+        <div class="space-y-4">
+          
+          <!-- IPG LOGO SLOT -->
+          <!-- Replace the logo placeholder image/div below with your IPG logo file: -->
+          <!-- <img src="ipg-logo.png" alt="IPG Logo" class="h-16 sm:h-20 mx-auto object-contain"> -->
+          <div class="flex justify-center pb-2">
+            <img src="/QR/logo3.png" alt="IPG Logo" class="h-16 sm:h-20 mx-auto object-contain">
+          </div>
+
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Sistem Pelajar IPG</h2>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium mt-1">Portal Akses Sistem & Perkhidmatan Pelajar IPG</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MODULE SYSTEM TILES (BELOW WHITE CARD) -->
+      <div class="w-full">
+        <div class="flex items-center justify-between mb-4 px-1">
+          <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-cubes text-ipgGold-400"></i> Modul Sistem Pelajar
+          </h3>
+          <span class="text-xs text-slate-400 font-medium">Pilih modul di bawah</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- =================================================== -->
+          <!-- TILE 1: SISTEM KEHADIRAN                           -->
+          <!-- =================================================== -->
+          <!-- Edit href="#" below to add your attendance system URL -->
+          <a href="/QR/index.html" target="_blank" class="group bg-slate-900/80 hover:bg-slate-800/90 rounded-2xl p-5 border border-slate-700/80 hover:border-ipgBlue-500 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-ipgBlue-500/10 rounded-bl-full group-hover:bg-ipgBlue-500/20 transition-colors"></div>
+            
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-ipgBlue-500/20 border border-ipgBlue-500/30 text-ipgBlue-500 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-qrcode"></i>
+              </div>
+
+              <h4 class="text-base font-bold text-white group-hover:text-ipgBlue-500 transition-colors">Sistem Kehadiran</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">Jana Kod QR & Semakan Kehadiran</p>
+            </div>
+
+            <div class="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-ipgBlue-500 font-semibold">
+              <span>Buka Sistem</span>
+              <i class="fa-solid fa-arrow-up-right-from-square group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </a>
+
+          <!-- =================================================== -->
+          <!-- TILE 2: SISTEM PRAKTIKUM                           -->
+          <!-- =================================================== -->
+          <!-- Edit href="#" below to add your practicum system URL -->
+          <a href="praktikum2.html" target="_blank" class="group bg-slate-900/80 hover:bg-slate-800/90 rounded-2xl p-5 border border-slate-700/80 hover:border-ipgGold-500 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-ipgGold-500/10 rounded-bl-full group-hover:bg-ipgGold-500/20 transition-colors"></div>
+
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-ipgGold-500/20 border border-ipgGold-500/30 text-ipgGold-400 flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-school"></i>
+              </div>
+
+              <h4 class="text-base font-bold text-white group-hover:text-ipgGold-400 transition-colors">Sistem Praktikum</h4>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">Agihan & Pemilihan Sekolah Praktikum</p>
+            </div>
+
+            <div class="mt-6 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-ipgGold-400 font-semibold">
+              <span>Buka Sistem</span>
+              <i class="fa-solid fa-arrow-up-right-from-square group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </a>
+
+          <!-- =================================================== -->
+          <!-- TILE 3: FUTURE SYSTEM PLACEHOLDER                   -->
+          <!-- =================================================== -->
+          <div class="bg-slate-900/40 rounded-2xl p-5 border border-dashed border-slate-700/60 flex flex-col justify-between opacity-60">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-500 flex items-center justify-center text-xl font-bold mb-4">
+                <i class="fa-solid fa-file-signature"></i>
+              </div>
+              <h4 class="text-base font-bold text-slate-300">Sistem Aduan Pelajar</h4>
+              <p class="text-xs text-slate-500 mt-1">Kemukakan aduan anda secara anonymous</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-800 text-[11px] text-slate-500 font-semibold">
+              <i class="fa-solid fa-clock mr-1"></i> Akan Datang
+            </div>
+          </div>
+
+          <!-- =================================================== -->
+          <!-- TILE 4: FUTURE SYSTEM PLACEHOLDER                   -->
+          <!-- =================================================== -->
+          <div class="bg-slate-900/40 rounded-2xl p-5 border border-dashed border-slate-700/60 flex flex-col justify-between opacity-60">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-500 flex items-center justify-center text-xl font-bold mb-4">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h4 class="text-base font-bold text-slate-300">Kebajikan & Elaun</h4>
+              <p class="text-xs text-slate-500 mt-1">Permohonan Bantuan & Tuntutan Elaun</p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-slate-800 text-[11px] text-slate-500 font-semibold">
+              <i class="fa-solid fa-clock mr-1"></i> Akan Datang
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-20 border-t border-slate-800/80 bg-slate-950/60 py-4 text-center text-xs text-slate-400">
+    <p>© Institut Pendidikan Guru Malaysia Kampus Bahasa Antarabangsa.</p>
+  </footer>
+
+</body>
+</html>
