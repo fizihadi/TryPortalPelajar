@@ -44,22 +44,18 @@
   </script>
 
   <style>
-    /* ========================================================= */
-    /* CUSTOMIZABLE BACKGROUND IMAGE                              */
-    /* Replace the URL below with your background image path/URL  */
-    /* Example: --bg-photo-url: url('images/my-bg.jpg');         */
-    /* ========================================================= */
     :root {
-      --bg-photo-url: url('Bg.png'); /* Add your custom background photo URL here */
+      --bg-photo-url: url('Bg.png');
     }
 
-    /* Container styled for custom photo background */
+    /* Fix background to cover full height and scroll properly without cutting off */
     .bg-custom-photo {
       background-image: var(--bg-photo-url);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-color: #0b1329; /* Neutral base background fallback */
+      background-attachment: fixed; /* Keeps the background locked nicely in place */
+      background-color: #0b1329;
     }
 
     /* Custom Scrollbar */
