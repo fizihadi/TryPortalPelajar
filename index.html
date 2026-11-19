@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ms" class="h-full">
+<html lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,18 +44,34 @@
   </script>
 
   <style>
+    /* ========================================================= */
+    /* CUSTOMIZABLE BACKGROUND IMAGE                              */
+    /* Replace the URL below with your background image path/URL  */
+    /* Example: --bg-photo-url: url('images/my-bg.jpg');         */
+    /* ========================================================= */
     :root {
-      --bg-photo-url: url('Bg.png');
+      --bg-photo-url: url('Bg.png'); /* Add your custom background photo URL here */
     }
 
-    /* Fix background to cover full height and scroll properly without cutting off */
-    .bg-custom-photo {
+    body {
+      background-color: #0b1329; /* Neutral base background fallback */
+    }
+
+    /* Static full-screen background (fixes mobile clipping & scroll movement) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100lvh;
       background-image: var(--bg-photo-url);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-attachment: fixed; /* Keeps the background locked nicely in place */
-      background-color: #0b1329;
+      z-index: -1;
+      pointer-events: none;
     }
 
     /* Custom Scrollbar */
@@ -65,7 +81,7 @@
   </style>
 </head>
 
-<body class="h-full bg-custom-photo text-slate-100 font-sans antialiased relative overflow-x-hidden flex flex-col min-h-screen">
+<body class="text-slate-100 font-sans antialiased relative overflow-x-hidden flex flex-col min-h-screen">
 
   <!-- ========================================================= -->
   <!-- TOP NAVIGATION HEADER                                     -->
@@ -160,7 +176,7 @@
           <!-- TILE 2: SISTEM PRAKTIKUM                           -->
           <!-- =================================================== -->
           <!-- Edit href="#" below to add your practicum system URL -->
-          <a href="https://fizihadi.github.io/TryPraktikumSystem/" target="_blank" class="group bg-slate-900/80 hover:bg-slate-800/90 rounded-2xl p-5 border border-slate-700/80 hover:border-ipgGold-500 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col justify-between relative overflow-hidden">
+          <a href="https://fizihadi.github.io/MainPraktikum/" target="_blank" class="group bg-slate-900/80 hover:bg-slate-800/90 rounded-2xl p-5 border border-slate-700/80 hover:border-ipgGold-500 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col justify-between relative overflow-hidden">
             <div class="absolute top-0 right-0 w-20 h-20 bg-ipgGold-500/10 rounded-bl-full group-hover:bg-ipgGold-500/20 transition-colors"></div>
 
             <div>
